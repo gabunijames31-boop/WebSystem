@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment Variables
+.env
+
+# Database 
+# (Strictly ignoring SQLite binaries to prevent repo bloat and data leaks)
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# User Uploads (Multer target directory)
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Editor & OS Artifacts
+*.swp
+*.swo
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
