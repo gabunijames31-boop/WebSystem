@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cuprum:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@450" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cuprum:ital,wght@0,400..700;1,400..700&family=Diplomata+SC&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Rubik+Wet+Paint&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="main.css">
+<title>Home Page</title>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-right">
+        <span class="header-title"></span>
+    </div>
+</header>
+
+<button class="menu-btn" onclick="toggleNav()"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000">
+    <path d="M80-813.33V-880h800v66.67H80ZM80-80v-66.67h800V-80H80Zm206.67-526.67v-106.66h386.66v106.66H286.67Zm0 360v-106.66h386.66v106.66H286.67Z"/></svg>
+</button>
+    
+<div class="sidenav" id="sidenav">
+
+    <div class="side-logo">
+        <img src="logo.png" alt="Library Logo">
+    </div>
+
+    <a href="homepage.html">Home</a>
+    <br>
+    <a href="dev.html">About Us</a>
+    <br>
+    <a href="catalog.html">Catalog Books</a>
+    <br>
+    <a href="help.html">Help / Support</a>
+    <br>
+    <a href="recommendations.html">Recommendations</a>
+    <br>
+
+
+    <div class="form-divider"></div>
+
+    <a href="dashboard.html">Dashboard</a>
+    <br>
+    <a href="contact.html">Contact</a>
+    
+</div>
+
+<div class="main" id="main">
+
+    <section class="hero-section" style="background: linear-gradient(rgba(44, 24, 16, 0.7), rgba(44, 24, 16, 0.7)), url('https://kimi-web-img.moonshot.cn/img/archello.s3.eu-central-1.amazonaws.com/9f18cee36040fdce8c31799e67f0395f809dfaed.jpg');    height: 80vh;">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to <span style="color:#ce4e97e1; font-family: 'Diplomata SC', serif; font-size: 65px;">ReadVault</span> Library</h1>
+            <p class="hero-subtitle">Explore books, resources, and digital learning in one place.</p>
+            <button class="cta-button" onclick="window.location.href='collection.html';" style="color: var(--creams);">Explore Collection</button>
+        </div> 
+        <div class="hero-pattern"></div>
+    </section>
+
+    <section class="featured-section">
+        <div class="section-header">
+            <h2 class="section-title">Featured This Year</h2>
+            <a href="#" class="view-all">
+                <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#FFFFFF">
+                    <path d="M40-160v-640l234 38.67v562.66L40-160Zm320.67-39.33V-760h238.66v560.67H360.67ZM920-160l-234-38.67v-562.66L920-800v640Zm-813.33-79 100.66-17v-448.67l-100.66-16.66V-239Zm320.66-27h105.34v-427.33H427.33V-266Zm426 27.33v-482.66l-100.66 16.66v449.34l100.66 16.66ZM106.67-239l100.66-17-100.66 17Zm320.66-27h105.34-105.34Zm426 27.33-100.66-16.66 100.66 16.66Z"/>
+                </svg>
+            </a>
+        </div>
+        
+        <div class="book-grid">
+            <article class="book-card featured">
+                <div class="book-cover">
+                    <div class="book-spine"></div>
+                    <div class="book-front">
+                        <img src="https://kimi-web-img.moonshot.cn/img/m.media-amazon.com/9bd6061a070a92207b5920ea98e3691c38bc78c3.jpg" alt="Harry Potter and the Philosopher's Stone">
+                    </div>
+                    <div class="book-shadow"></div>
+                </div>
+                <div class="book-info">
+                    <h3>Harry Potter and the Philosopher's Stone</h3>
+                    <p class="author">J. K. Rowling</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="description">Harry discovers he is a wizard on his eleventh birthday and begins his magical education at Hogwarts School of Witchcraft and Wizardry.</p>
+                    <a href="https://www.startingharrypotter.com/book/book-one/read-now">
+                        <button class="read-btn" onclick="openModal('stone')">Read Now</button>
+                    </a>
+                </div>
+            </article>
+
+            <article class="book-card featured">
+                <div class="book-cover">
+                    <div class="book-spine"></div>
+                    <div class="book-front">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.europosters.eu/96dc99d7cd7caf06e0e00f684c369de563554728.jpg" alt="Harry Potter and the Chamber of Secrets">
+                    </div>
+                    <div class="book-shadow"></div>
+                </div>
+                <div class="book-info">
+                    <h3>Harry Potter and the Chamber of Secrets</h3>
+                    <p class="author">J. K. Rowling</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="description">Harry returns to Hogwarts for his second year, but a mysterious chamber has been opened, unleashing a monster that petrifies students.</p>
+                    <a href="https://en.wikipedia.org/wiki/Harry_Potter_and_the_Chamber_of_Secrets">
+                        <button class="read-btn" onclick="openModal('chamber')">Read Now</button>
+                    </a>
+                </div>
+            </article>
+
+            <article class="book-card featured">
+                <div class="book-cover">
+                    <div class="book-spine"></div>
+                    <div class="book-front">
+                        <img src="https://kimi-web-img.moonshot.cn/img/res.cloudinary.com/c0076cfc9936ca3f1d160e7d72d15a5e21f5d802.jpg" alt="Harry Potter and the Prisoner of Azkaban">
+                    </div>
+                    <div class="book-shadow"></div>
+                </div>
+                <div class="book-info">
+                    <h3>Harry Potter and the Prisoner of Azkaban</h3>
+                    <p class="author">J. K. Rowling</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="description">Sirius Black, a dangerous prisoner, has escaped from Azkaban and is believed to be hunting Harry Potter.</p>
+                    <a href="https://en.wikipedia.org/wiki/Harry_Potter_and_the_Prisoner_of_Azkaban">
+                        <button class="read-btn" onclick="openModal('azkaban')">Read Now</button>
+                    </a>
+                </div>
+            </article>
+
+            <article class="book-card featured">
+                <div class="book-cover">
+                    <div class="book-spine"></div>
+                    <div class="book-front">
+                        <img src="https://kimi-web-img.moonshot.cn/img/m.media-amazon.com/282a24a706905e80f453d646fb5461fd65f5c64a.jpg" alt="Harry Potter and the Goblet of Fire">
+                    </div>
+                    <div class="book-shadow"></div>
+                </div>
+                <div class="book-info">
+                    <h3>Harry Potter and the Goblet of Fire</h3>
+                    <p class="author">J. K. Rowling</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="description">Harry is mysteriously entered into the dangerous Triwizard Tournament, competing against older wizards from other schools.</p>
+                    <a href="https://en.wikipedia.org/wiki/Harry_Potter_and_the_Goblet_of_Fire">
+                        <button class="read-btn" onclick="openModal('goblet')">Read Now</button>
+                    </a>
+                </div>
+            </article>
+
+            <article class="book-card featured">
+                <div class="book-cover">
+                    <div class="book-spine"></div>
+                    <div class="book-front">
+                        <img src="https://kimi-web-img.moonshot.cn/img/johnatkinsonbooks.co.uk/ccc4edbb06653e5ecc2cea044bfbc69e7392615c.jpg" alt="Harry Potter and the Order of the Phoenix">
+                    </div>
+                    <div class="book-shadow"></div>
+                </div>
+                <div class="book-info">
+                    <h3>Harry Potter and the Order of the Phoenix</h3>
+                    <p class="author">J. K. Rowling</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="description">Harry faces denial from the Ministry of Magic about Voldemort's return while dealing with a new tyrannical Defense Against the Dark Arts teacher.</p>
+                    <a href="https://en.wikipedia.org/wiki/Harry_Potter_and_the_Order_of_the_Phoenix">
+                        <button class="read-btn" onclick="openModal('phoenix')">Read Now</button>
+                    </a>
+                </div>
+            </article>
+
+            <article class="book-card featured">
+                <div class="book-cover">
+                    <div class="book-spine"></div>
+                    <div class="book-front">
+                        <img src="https://kimi-web-img.moonshot.cn/img/media.harrypotterfanzone.com/06091f13a5398158351d5d6db9e73b28d3b39dc4.jpg" alt="Harry Potter and the Half-Blood Prince">
+                    </div>
+                    <div class="book-shadow"></div>
+                </div>
+                <div class="book-info">
+                    <h3>Harry Potter and the Half-Blood Prince</h3>
+                    <p class="author">J. K. Rowling</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="description">Harry learns about Voldemort's past through memories with Dumbledore while discovering a mysterious potions textbook.</p>
+                    <a href="https://en.wikipedia.org/wiki/Harry_Potter_and_the_Half-Blood_Prince">
+                        <button class="read-btn" onclick="openModal('prince')">Read Now</button>
+                    </a>
+                </div>
+            </article>
+
+            <article class="book-card featured">
+                <div class="book-cover">
+                    <div class="book-spine"></div>
+                    <div class="book-front">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.waterstones.com/ad7982fb0d7e9d963373e004b9994f6cb3d46f9a.jpg" alt="Harry Potter and the Deathly Hallows">
+                    </div>
+                    <div class="book-shadow"></div>
+                </div>
+                <div class="book-info">
+                    <h3>Harry Potter and the Deathly Hallows</h3>
+                    <p class="author">J. K. Rowling</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="description">Harry, Ron, and Hermione embark on a dangerous quest to find and destroy Voldemort's Horcruxes to defeat him once and for all.</p>
+                    <a href="https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows">
+                        <button class="read-btn" onclick="openModal('hallows')">Read Now</button>
+                    </a>
+                </div>
+            </article>
+
+            <article class="book-card featured">
+                <div class="book-cover">
+                    <div class="book-spine"></div>
+                    <div class="book-front">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.kobo.com/d8eb7d4441f44e390d6c1bad4a4b3ab727596255.jpg" alt="Fantastic Beasts and Where to Find Them">
+                    </div>
+                    <div class="book-shadow"></div>
+                </div>
+                <div class="book-info">
+                    <h3>Fantastic Beasts and Where to Find Them</h3>
+                    <p class="author">J. K. Rowling</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="description">Newt Scamander, a magizoologist, arrives in New York with a suitcase full of magical creatures.</p>
+                    <a href="https://en.wikipedia.org/wiki/Fantastic_Beasts_and_Where_to_Find_Them">
+                        <button class="read-btn" onclick="openModal('beasts')">Read Now</button>
+                    </a>
+                </div>
+            </article>
+
+            <article class="book-card featured">
+                <div class="book-cover">
+                    <div class="book-spine"></div>
+                    <div class="book-front">
+                        <img src="https://kimi-web-img.moonshot.cn/img/m.media-amazon.com/0ac85c3c8f11b3ec3cbe94cee21989f24112118b.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald">
+                    </div>
+                    <div class="book-shadow"></div>
+                </div>
+                <div class="book-info">
+                    <h3>Fantastic Beasts: The Crimes of Grindelwald</h3>
+                    <p class="author">J. K. Rowling</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="description">The dark wizard Gellert Grindelwald is gaining power.</p>
+                    <a href="https://en.wikipedia.org/wiki/Fantastic_Beasts:_The_Crimes_of_Grindelwald">
+                        <button class="read-btn" onclick="openModal('grindelwald')">Read Now</button>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="categories-section">
+        <h2 class="section-title center">Browse by Genre</h2>
+        <div class="category-grid">
+            <a href="fantasy.html" class="category-card fantasy">
+                <div class="category-icon">🐉</div>
+                <h3>Fantasy</h3>
+                <p>Epic worlds and magical realms</p>
+                <div class="category-count">15 titles</div>
+            </a>
+            
+            <a href="science.html" class="category-card scifi">
+                <div class="category-icon">🚀</div>
+                <h3>Sci-Fi</h3>
+                <p>Future visions and cosmic adventures</p>
+                <div class="category-count">15 titles</div>
+            </a>
+            
+            <a href="manga.html" class="category-card manga">
+                <div class="category-icon">⛩️</div>
+                <h3>Manga</h3>
+                <p>Japanese art and storytelling</p>
+                <div class="category-count">15 titles</div>
+            </a>
+            
+            <a href="drama.html" class="category-card drama">
+                <div class="category-icon">🎭</div>
+                <h3>Drama</h3>
+                <p>Emotional journeys and human stories</p>
+                <div class="category-count">15 titles</div>
+            </a>
+
+            <a href="movies.html" class="category-card drama">
+                <div class="category-icon">🎬</div>
+                <h3>Movie</h3>
+                <p>Intense actions with all characters</p>
+                <div class="category-count">15 titles</div>
+            </a>
+
+            <a href="documentary.html" class="category-card drama">
+                <div class="category-icon">📽️</div>
+                <h3>Documentary</h3>
+                <p>Findings for all solutions</p>
+                <div class="category-count">15 titles</div>
+            </a>
+
+            <a href="cartoons.html" class="category-card drama">
+                <div class="category-icon">🦸</div>
+                <h3>Cartoons</h3>
+                <p>Performing for all kids and teens</p>
+                <div class="category-count">15 titles</div>
+            </a>
+
+             <a href="comedy.html" class="category-card drama">
+                <div class="category-icon">🤡</div>
+                <h3>Comedy</h3>
+                <p>Live Laugh and enjoying the performance</p>
+                <div class="category-count">15 titles</div>
+            </a>
+
+            <a href="comics.html" class="category-card drama">
+                <div class="category-icon">📺</div>
+                <h3>Comics</h3>
+                <p>comic books, graphic novels, or comic strips in newspapers.</p>
+                <div class="category-count">15 titles</div>
+            </a>
+
+            <a href="historical.html" class="category-card drama">
+                <div class="category-icon">🕰️</div>
+                <h3>Historical Fiction</h3>
+                <p>Historical books tell stories that happen in the past</p>
+                <div class="category-count">15 titles</div>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="new-arrivals">
+        <div class="section-header">
+            <h2 class="section-title">New Arrivals</h2>
+            <a href="#" class="view-all-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#FFFFFF">
+                    <path d="M40-160v-640l234 38.67v562.66L40-160Zm320.67-39.33V-760h238.66v560.67H360.67ZM920-160l-234-38.67v-562.66L920-800v640Zm-813.33-79 100.66-17v-448.67l-100.66-16.66V-239Zm320.66-27h105.34v-427.33H427.33V-266Zm426 27.33v-482.66l-100.66 16.66v449.34l100.66 16.66ZM106.67-239l100.66-17-100.66 17Zm320.66-27h105.34-105.34Zm426 27.33-100.66-16.66 100.66 16.66Z"/>
+                </svg>
+            </a>
+        </div>
+        
+        <div class="horizontal-scroll">
+            <div class="book-mini">
+                <a href="https://en.wikipedia.org/wiki/The_Secret_of_Secrets_(novel)">
+                    <div class="mini-cover">
+                        <img src="https://kimi-web-img.moonshot.cn/img/danbrown.com/de72728d664316516207fc2bc747cd8124d24d44.jpg" alt="The Secret of Secrets by Dan Brown">
+                    </div>
+                </a>
+                <p class="mini-title">The Secret of Secrets</p>
+                <p class="mini-author">Dan Brown</p>
+            </div>
+            
+            <div class="book-mini">
+                <a href="https://www.goodreads.com/book/show/220301347-the-first-gentleman">
+                    <div class="mini-cover">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.hachettebookgroup.com/1bbc9391529bddb6c833873e3a9266de73e404b8.jpg" alt="The First Gentleman by Bill Clinton & James Patterson">
+                    </div>
+                </a>
+                <p class="mini-title">The First Gentleman</p>
+                <p class="mini-author">Bill Clinton & James Patterson</p>
+            </div>
+            
+            <div class="book-mini">
+                <a href="https://en.wikipedia.org/wiki/The_Strength_of_the_Few">
+                    <div class="mini-cover">
+                        <img src="https://kimi-web-img.moonshot.cn/img/d28hgpri8am2if.cloudfront.net/70f51287bc1e83edaaec8121c0a7bcdc48dee739.jpg" alt="The Strength of the Few by James Islington">
+                    </div>
+                </a>
+                <p class="mini-title">The Strength of the Few</p>
+                <p class="mini-author">James Islington</p>
+            </div>
+            
+            <div class="book-mini">
+                <a href="https://en.wikipedia.org/wiki/Brimstone_(novel)">
+                    <div class="mini-cover">
+                        <img src="https://kimi-web-img.moonshot.cn/img/i.gr-assets.com/286030dea201915ff5c8bb4c8ae1363491e13409.jpg" alt="Brimstone by Callie Hart">
+                    </div>
+                </a>
+                <p class="mini-title">Brimstone</p>
+                <p class="mini-author">Callie Hart</p>
+            </div>
+            
+            <div class="book-mini">
+                <a href="https://en.wikipedia.org/wiki/The_Emperor_of_Gladness">
+                    <div class="mini-cover">
+                        <img src="https://kimi-web-img.moonshot.cn/img/images.cdn1.buscalibre.com/a095f1069fc6dbfbe5d8924b926c2c77462fa084.jpg" alt="The Emperor of Gladness by Ocean Vuong">
+                    </div>
+                </a>
+                <p class="mini-title">The Emperor of Gladness</p>
+                <p class="mini-author">Ocean Vuong</p>
+            </div>
+            
+            <div class="book-mini">
+                <a href="https://en.wikipedia.org/wiki/Heart_the_Lover">
+                    <div class="mini-cover">
+                        <img src="https://kimi-web-img.moonshot.cn/img/m.media-amazon.com/28048ebb775adfd4901b0b83767c4a15ebd26a71.jpg" alt="Heart the Lover by Lily King">
+                    </div>
+                </a>
+                <p class="mini-title">Heart the Lover</p>
+                <p class="mini-author">Lily King</p>
+            </div>
+            
+            <div class="book-mini">
+                <a href="https://en.wikipedia.org/wiki/Building_903">
+                    <div class="mini-cover">
+                        <img src="https://kimi-web-img.moonshot.cn/img/people.com/a6eeb3d05a202a651324aeb69dc9a790edaaeeed.jpg" alt="Building 903 by Lois Lowry">
+                    </div>
+                </a>
+                <p class="mini-title">Building 903</p>
+                <p class="mini-author">Lois Lowry</p>
+            </div>
+            
+            <div class="book-mini">
+                <a href="https://en.wikipedia.org/wiki/How_to_Not_Die_in_Prison">
+                    <div class="mini-cover">
+                        <img src="https://kimi-web-img.moonshot.cn/img/d28hgpri8am2if.cloudfront.net/96f80c6a065145c98bc08b82743d8729dbfd101d.jpg" alt="How to Not Die in Prison by Taylor Sheridan & Tom Nelson">
+                    </div>
+                </a>
+                <p class="mini-title">How to Not Die in Prison</p>
+                <p class="mini-author">Taylor Sheridan & Tom Nelson</p>
+            </div>
+        </div>
+    </section>
+    
+    <br>
+
+    <div class="form-divider" style="margin-bottom: 20px;"></div>
+    <div class="bottom">  
+        
+        <h1 style="font-family: Bungee, sans-serif; text-align: center;">From other <span style="color:#07c3bcad;">Online sources</span></h1>
+    </div>
+
+    <br>    
+
+    <section class="display-section">
+        <div class="stats-card">
+            <h3 class="text">Academic Books</h3>
+
+            <div class="display-book">
+                <div class="display-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/bookstr.com/e35a6fc2388c0d6142648be9ce8de4f0df3a138d.jpg" alt="Literature - Classic Books">
+                </div>
+                <div class="display-info">
+                    <h3>Literature</h3>
+                    <p class="display-title">The study of written works such as stories, 
+                    poems, novels, and plays. It focuses on understanding themes, messages, and how language is used.</p>
+                    <a href="https://researchmethodology.org/literature/">
+                        <button class="read-bot">View Now</button>
+                    </a>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="display-book">
+                <div class="display-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/cdn.vectorstock.com/4259146c71c2895047fad187451b4917564f4874.jpg" alt="Mathematics - Formulas and Equations">
+                </div>
+                <div class="display-info">
+                    <h3>Mathematics</h3>
+                    <p class="display-title">The study of numbers, patterns, formulas,
+                    and problem-solving. It helps develop logical and critical thinking.</p>
+                    <a href="https://www.khanacademy.org/math">
+                        <button class="read-bot">View Now</button>
+                    </a>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="display-book">
+                <div class="display-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/cdn.kastatic.org/482ed937e52ddb65ee4255663568c71f7642c271.png" alt="Biology - Microscope and Cells">
+                </div>
+                <div class="display-info">
+                    <h3>Biology</h3>
+                    <p class="display-title">The study of living things, including plants,
+                    animals, humans, and how life processes work.</p>
+                    <a href="https://www.biologyonline.com/dictionary/branches-of-biology">
+                        <button class="read-bot">View Now</button>
+                    </a>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="display-book">
+                <div class="display-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/images.everydayhealth.com/a37eb896aeef5e737b7c34210082016f7fd0f04b.jpg" alt="Physical Health - Fitness and Wellness">
+                </div>
+                <div class="display-info">
+                    <h3>Physical Health</h3>
+                    <p class="display-title">The study and practice of keeping the body healthy through exercise, 
+                    nutrition, proper rest, and healthy lifestyle habits.</p>
+                    <a href="https://www.cdc.gov/physicalactivity/index.html">
+                        <button class="read-bot">View Now</button>
+                    </a>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="display-book">
+                <div class="display-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/media.istockphoto.com/3c4900723e8d75b1c97b16e40311db058aca9ff6.jpg" alt="Economics - Financial Graphs">
+                </div>
+                <div class="display-info">
+                    <h3>Principles of Economics</h3>
+                    <p class="display-title">This book explains the basic principles of economics, including how individuals,
+                    businesses, and governments make decisions about using limited resources.</p>
+                    <a href="https://www.economicshelp.org/">
+                        <button class="read-bot">View Now</button>
+                    </a>    
+                </div>          
+            </div>
+        </div>
+    </section>
+    
+    <section class="post-section">
+        <div class="post-card">
+            <h3 class="text">Programming Books</h3>
+
+            <div class="post-book">
+                <div class="post-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/m.media-amazon.com/b8033429afd26c48bba991a52b75f0bc0d8c5462.jpg" alt="Machine Learning: A Probabilistic Perspective by Kevin Murphy">
+                </div>
+                <div class="post-info">
+                    <h3>Machine Learning: A Probabilistic Perspective</h3>
+                    <p class="post-title">This academic book explains machine learning using probability and statistics.
+                    It teaches how computers learn from data to make predictions or decisions.</p>
+                    <a href="https://www.amazon.com/Machine-Learning-Probabilistic-Perspective-Computation/dp/0262018020">
+                        <button class="read-bot">View Now</button>
+                    </a>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="post-book">
+                <div class="post-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/m.media-amazon.com/e320d6d07f63a7144f446dba0222892ded10a39b.jpg" alt="Data Structures and Algorithms Made Easy by Narasimha Karumanchi">
+                </div>
+                <div class="post-info">
+                    <h3>Data Structures and Algorithms</h3>
+                    <p class="post-title">This subject focuses on how data is organized, stored, and processed efficiently in computer programs.</p>
+                    <a href="https://www.amazon.com/Data-Structures-Algorithms-Made-Easy/dp/819324527X">
+                        <button class="read-bot">View Now</button>
+                    </a>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="post-book">
+                <div class="post-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/m.media-amazon.com/cc9dcc7761c93c8bf466c1ad64e4898eab3514af.jpg" alt="Web Development with HTML, CSS, and JavaScript">
+                </div>
+                <div class="post-info">
+                    <h3>Web Developing</h3>
+                    <p class="post-title">Web developing is the process of creating and maintaining websites or web applications. 
+                    It involves technologies such as HTML, CSS, and JavaScript for the front-end, and programming languages like PHP</p>
+                    <a href="https://www.w3schools.com/whatis/">
+                        <button class="read-bot">View Now</button>
+                    </a>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="post-book">
+                <div class="post-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/m.media-amazon.com/98a2ad819824098b0eea1912b079af1a546e063a.jpg" alt="Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville">
+                </div>
+                <div class="post-info">
+                    <h3>Deep Learning</h3>
+                    <p class="post-title">This academic book focuses on deep neural networks, a major technology behind modern artificial intelligence.</p>
+                    <a href="https://www.deeplearningbook.org/">
+                        <button class="read-bot">View Now</button>
+                    </a>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="post-book">
+                <div class="post-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/www.tatvasoft.com/11d6a8ce83a79f4f717ec85a5b118efe3ea2d577.jpg" alt="Programming Frameworks - React, Angular, Vue">
+                </div>
+                <div class="post-info">
+                    <h3>Frameworks</h3>
+                    <p class="post-title">Frameworks are pre-built software tools and libraries that help developers create applications faster and more efficiently.</p>
+                    <a href="https://www.tatvasoft.com/blog/top-10-web-development-frameworks/">
+                        <button class="read-bot">View Now</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+</section>
+
+    <div class="form-divider"></div>
+
+    <section class="end-home">
+        <div class="ends">
+
+            <h3>Thanks for visiting and Reading all Books!</h3>
+            <br>
+            <p>Were glad you stopped by to explore our collection of books, digital resources,<br>
+                and learning materials. Our library is a welcoming space for students, teachers,<br>
+                researchers, and all readers who are looking for knowledge, inspiration, and reliable <br>
+                information. We aim to support your academic work, personal interests, and lifelong <br>
+                learning goals through quality resources and helpful services.
+                <br>
+                <br>
+                You can easily search our catalog, view new and recommended titles, and discover <br>
+                a wide range of subjects from literature and history to science, health, and technology. <br>
+                Our website is designed to make finding information simple and convenient, whether you <br>
+                are studying, doing research, or reading for enjoyment.
+            </p>
+            
+        </div>
+    </section>
+    
+</div>
+<script src="main.js"></script>
+</body>
+</html>

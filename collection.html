@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cuprum:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="collection.css">
+
+    <title>Book Collection</title>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-right">
+            <img src="logo.png" class="nav-logo" alt="ReadVault Logo">
+            <span class="nav-brand">Book Collections</span>
+        </div>
+        <div class="nav-left">
+            <button class="btn-logout" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="controls">
+            <button class="btn-back" onclick="goBack()">
+                <span class="back-arrow"></span> Back 
+            </button>
+            <p style="font-family: 'Bungee', sans-serif; letter-spacing: 1.4px; color: var( --color-placeholder)">Welcome to our collection books!</p>
+        </section>
+
+        <section class="book-grid" id="bookGrid">
+            <article class="book-card" data-title="the great gatsby" data-author="f. scott fitzgerald" data-genre="classic fiction" data-date="1925-04-10">
+                <div class="book-cover">
+                    <img src="https://i0.wp.com/americanwritersmuseum.org/wp-content/uploads/2018/02/CK-3.jpg?resize=267%2C400&ssl=1" alt="The Great Gatsby">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">The Great Gatsby</h3>
+                    <p class="book-author">F. Scott Fitzgerald</p>
+                    <span class="book-genre">Classic Fiction</span>
+                    <p class="book-date">Released: April 10, 1925</p>
+                </div>
+            </article>
+
+            <article class="book-card" data-title="to kill a mockingbird" data-author="harper lee" data-genre="classic fiction" data-date="1960-07-11">
+                <div class="book-cover">
+                    <img src="https://i.etsystatic.com/8320619/r/il/46b283/5207610926/il_fullxfull.5207610926_fjcq.jpg" alt="To Kill a Mockingbird">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">To Kill a Mockingbird</h3>
+                    <p class="book-author">Harper Lee</p>
+                    <span class="book-genre">Classic Fiction</span>
+                    <p class="book-date">Released: July 11, 1960</p>
+                </div>
+            </article>
+
+            <article class="book-card" data-title="1984" data-author="george orwell" data-genre="dystopian" data-date="1949-06-08">
+                <div class="book-cover">
+                    <img src="https://www.penguin.co.uk/_next/image?url=https%3A%2F%2Fcdn.penguin.co.uk%2Fdam-assets%2Fbooks%2F9780141036144%2F9780141036144-jacket-large.jpg&w=614&q=100" alt="1984">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">1984</h3>
+                    <p class="book-author">George Orwell</p>
+                    <span class="book-genre">Dystopian</span>
+                    <p class="book-date">Released: June 8, 1949</p>
+                </div>
+            </article>
+
+            <article class="book-card" data-title="pride and prejudice" data-author="jane austen" data-genre="romance" data-date="1813-01-28">
+                <div class="book-cover">
+                    <img src="https://images.penguinrandomhouse.com/cover/9780593622452" alt="Pride and Prejudice">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">Pride and Prejudice</h3>
+                    <p class="book-author">Jane Austen</p>
+                    <span class="book-genre">Romance</span>
+                    <p class="book-date">Released: January 28, 1813</p>
+                </div>
+            </article>
+
+            <article class="book-card" data-title="harry potter and the sorcerer's stone" data-author="j.k. rowling" data-genre="fantasy" data-date="1997-06-26">
+                <div class="book-cover">
+                    <img src="https://cdn.kobo.com/book-images/49d00979-e1f2-4918-8e21-ba3db2607380/1200/1200/False/harry-potter-and-the-philosopher-s-stone-3.jpg" alt="Harry Potter and the Sorcerer's Stone">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">Harry Potter and the Sorcerer's Stone</h3>
+                    <p class="book-author">J.K. Rowling</p>
+                    <span class="book-genre">Fantasy</span>
+                    <p class="book-date">Released: June 26, 1997</p>
+                </div>
+            </article>
+
+            <article class="book-card" data-title="the hobbit" data-author="j.r.r. tolkien" data-genre="fantasy" data-date="1937-09-21">
+                <div class="book-cover">
+                    <img src="https://m.media-amazon.com/images/I/81uEDUfKBZL.jpg" alt="The Hobbit">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">The Hobbit</h3>
+                    <p class="book-author">J.R.R. Tolkien</p>
+                    <span class="book-genre">Fantasy</span>
+                    <p class="book-date">Released: September 21, 1937</p>
+                </div>
+            </article>
+
+            <article class="book-card" data-title="the catcher in the rye" data-author="j.d. salinger" data-genre="literary fiction" data-date="1951-07-16">
+                <div class="book-cover">
+                    <img src="https://cdn.penguin.co.uk/dam-assets/books/9780241950425/9780241950425-jacket-large.jpg" alt="The Catcher in the Rye">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">The Catcher in the Rye</h3>
+                    <p class="book-author">J.D. Salinger</p>
+                    <span class="book-genre">Literary Fiction</span>
+                    <p class="book-date">Released: July 16, 1951</p>
+                </div>
+            </article>
+
+            <article class="book-card" data-title="brave new world" data-author="aldous huxley" data-genre="dystopian" data-date="1932-08-01">
+                <div class="book-cover">
+                    <img src="https://i.etsystatic.com/52051369/r/il/7cd522/5976414302/il_fullxfull.5976414302_md67.jpg" alt="Brave New World">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">Brave New World</h3>
+                    <p class="book-author">Aldous Huxley</p>
+                    <span class="book-genre">Dystopian</span>
+                    <p class="book-date">Released: August 1, 1932</p>
+                </div>
+            </article>
+
+            <article class="book-card" data-title="the da vinci code" data-author="dan brown" data-genre="thriller" data-date="2003-03-18">
+                <div class="book-cover">
+                    <img src="https://danbrown.com/wp-content/uploads/2024/10/Dan-Brown_The-Da-Vinci-Code-book-cover_2024.jpg" alt="The Da Vinci Code">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">The Da Vinci Code</h3>
+                    <p class="book-author">Dan Brown</p>
+                    <span class="book-genre">Thriller</span>
+                    <p class="book-date">Released: March 18, 2003</p>
+                </div>
+            </article>
+
+            <article class="book-card" data-title="gone girl" data-author="gillian flynn" data-genre="mystery" data-date="2012-06-05">
+                <div class="book-cover">
+                    <img src="https://images.gr-assets.com/books/1339602131l/8442457.jpg" alt="Gone Girl">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">Gone Girl</h3>
+                    <p class="book-author">Gillian Flynn</p>
+                    <span class="book-genre">Mystery</span>
+                    <p class="book-date">Released: June 5, 2012</p>
+                </div>
+            </article>
+
+            <article class="book-card" data-title="the alchemist" data-author="paulo coelho" data-genre="fiction" data-date="1988-04-01">
+                <div class="book-cover">
+                    <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg" alt="The Alchemist">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">The Alchemist</h3>
+                    <p class="book-author">Paulo Coelho</p>
+                    <span class="book-genre">Fiction</span>
+                    <p class="book-date">Released: April 1, 1988</p>
+                </div>
+            </article>
+
+            <article class="book-card" data-title="dune" data-author="frank herbert" data-genre="science fiction" data-date="1965-08-01">
+                <div class="book-cover">
+                    <img src="https://covers.shakespeareandcompany.com/97814732/9781473233959.jpg" alt="Dune">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">Dune</h3>
+                    <p class="book-author">Frank Herbert</p>
+                    <span class="book-genre">Science Fiction</span>
+                    <p class="book-date">Released: August 1, 1965</p>
+                </div>
+            </article>
+
+            <div class="no-results" id="noResults">
+                <p>📚 No books found matching your criteria.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p style="text-align: center; font-size: 16px; font-family: 'Cuprum', sans-serif;">&copy; We have opened certain doors for you, placed lanterns along specific corridors,
+            but the true architecture of ReadVault reveals itself only to those who wander beyond 
+            the marked paths. Each collection you have yet to explore exists in silent conversation
+            with the others, creating resonances invisible in isolation.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
