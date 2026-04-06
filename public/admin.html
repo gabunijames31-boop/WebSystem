@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com
+" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cuprum:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap
+" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@450
+" />
+    <link rel="preconnect" href="https://fonts.googleapis.com
+">
+    <link rel="preconnect" href="https://fonts.gstatic.com
+" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cuprum:ital,wght@0,400..700;1,400..700&family=Diplomata+SC&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Rubik+Wet+Paint&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap
+" rel="stylesheet">
+
+    <title>Admin Dashboard</title>
+
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<!--HEADER-->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            
+            <div class="logo-section">
+                <span class="logo-icon">📚</span>
+                <div>
+                    <h1 class="logo-title">ReadVault</h1>
+                    <p class="logo-subtitle">Admin Dashboard</p>
+                </div>
+            </div>
+
+             <div class="nav-left">
+                <button class="btn-logout" onclick="logout()">Logout</button>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<main class="main-content">
+    <div class="container">
+        <!--STATISTICS CARDS-->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <p class="stat-label">Total Books</p>
+                    <span class="stat-icon">📚</span> 
+                </div> 
+                <p class="stat-number">156</p> <!--<p class="stat-detail">428 copies</p>--> 
+            </div> 
+            <div class="stat-card"> <div class="stat-header"> 
+                <p class="stat-label">Genres</p> 
+                <span class="stat-icon">🎭</span> 
+            </div> 
+                <p class="stat-number">12</p> <!--<p class="stat-detail">Categories</p>--> 
+            </div> </div> 
+            <!--SEARCH AND FILTER--> 
+            <div class="controls-panel"> 
+                <div class="search-section"> 
+                    <div class="search-bar"> 
+                        <span class="search-icon">🔍</span> 
+                        <input type="text" class="search-input" placeholder="Search by title, author, or ISBN...">
+                     </div> <div class="filters"> 
+                        <select class="filter-select"> 
+                            <option>All Genres</option> 
+                            <option>Fiction</option> 
+                            <option>Science Fiction</option> 
+                            <option>Fantasy</option> 
+                            <option>Mystery</option> 
+                            <option>Romance</option> 
+                            <option>Horror</option> 
+                            <option>Biography</option> 
+                            <option>History</option> 
+                        </select> 
+                        <select class="filter-select"> 
+                            <option>All Authors</option> 
+                            <option>Author1</option> 
+                            <option>Author2</option> 
+                            <option>Author3</option> 
+                            <option>Author4</option> 
+                            <option>Author5</option> 
+                            <option>Author6</option> 
+                            <option>Author7</option> 
+                        </select> 
+                        <button class="btn-add"> 
+                            <span>➕</span> Add New Book 
+                        </button> 
+                    </div> 
+                </div> 
+            </div>
+    <div class="table-container">
+        <table class="books-table">
+
+            <thead>
+            <tr>
+                <th>Book</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>ISBN</th>
+                <th>Year</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+
+        <tbody>
+
+        <!--1-->
+        <tr>
+        <td>
+        <div class="book-info">
+            <div class="book-cover">
+                <img src="image/onepiece.jpg" alt="onepiece" width="60px" height="76px">
+            </div>
+            <div>
+                <p class="book-title">One Piece</p>
+                <span class="book-rating">⭐ 4.8</span>
+            </div>
+        </div>
+        </td>
+            <td>Eiichiro Oda</td>
+            <td><span class="badge">Manga</span></td>
+            <td class="text-secondary">978-1421536255</td>
+            <td class="text-secondary">1997</td>
+            <td class="action-buttons">
+            <button class="btn-icon">👁️</button>
+            <button class="btn-icon">✏️</button>
+            <button class="btn-icon btn-delete">🗑️</button>
+        </td>
+        </tr>
+
+        <!--2-->
+        <tr>
+        <td>
+        <div class="book-info">
+            <div class="book-cover">
+                <img src="image/naruto.jpg" alt="naruto" width="60px" height="76px">
+            </div>
+            <div>
+                <p class="book-title">Naruto</p>
+                <span class="book-rating">⭐ 4.9</span>
+            </div>
+        </div>
+        </td>
+            <td>Masashi Kishimoto</td>
+            <td><span class="badge">Manga</span></td>
+            <td class="text-secondary">978-1569319000</td>
+            <td class="text-secondary">1999</td>
+            <td class="action-buttons">
+            <button class="btn-icon">👁️</button>
+            <button class="btn-icon">✏️</button>
+            <button class="btn-icon btn-delete">🗑️</button>
+        </td>
+        </tr>
+
+        <!--3-->
+        <tr>
+        <td>
+        <div class="book-info">
+            <div class="book-cover">
+                <img src="image/aot.webp" alt="aot" width="60px" height="76px">
+            </div>
+            <div>
+                <p class="book-title">Attack on Titan</p>
+                <span class="book-rating">⭐ 4.7</span>
+            </div>
+        </div>
+        </td>
+            <td>Hajime Isayama</td>
+            <td><span class="badge">Dark Fantasy</span></td>
+            <td class="text-secondary">978-1612620244</td>
+            <td class="text-secondary">2009</td>
+            <td class="action-buttons">
+            <button class="btn-icon">👁️</button>
+            <button class="btn-icon">✏️</button>
+            <button class="btn-icon btn-delete">🗑️</button>
+        </td>
+        </tr>
+
+        <!--4-->
+        <tr>
+        <td>
+        <div class="book-info">
+            <div class="book-cover">
+                <img src="image/pride.jpg" alt="pride" width="60px" height="76px">
+            </div>
+            <div>
+                <p class="book-title">Pride and Prejudice</p>
+                <span class="book-rating">⭐ 4.6</span>
+            </div>
+        </div>
+        </td>
+            <td>Jane Austen</td>
+            <td><span class="badge">Romance</span></td>
+            <td class="text-secondary">978-1503290563</td>
+            <td class="text-secondary">1813</td>
+            <td class="action-buttons">
+            <button class="btn-icon">👁️</button>
+            <button class="btn-icon">✏️</button>
+            <button class="btn-icon btn-delete">🗑️</button>
+        </td>
+        </tr>
+
+        <!--5-->
+        <tr>
+        <td>
+        <div class="book-info">
+            <div class="book-cover">
+                <img src="image/lion.jpg" alt="lion" width="60" height="76">
+            </div>
+            <div>
+                <p class="book-title">The Lion King</p>
+                <span class="book-rating">⭐ 4.5</span>
+            </div>
+        </div>
+        </td>
+            <td>Disney</td>
+            <td><span class="badge">Children</span></td>
+            <td class="text-secondary">978-0786838656</td>
+            <td class="text-secondary">1994</td>
+            <td class="action-buttons">
+            <button class="btn-icon">👁️</button>
+            <button class="btn-icon">✏️</button>
+            <button class="btn-icon btn-delete">🗑️</button>
+        </td>
+        </tr>
+
+        <!--6-->
+        <tr>
+        <td>
+        <div class="book-info">
+            <div class="book-cover">
+                <img src="image/earth.jpg" alt="earth" width="60px" height="76px">
+            </div>
+            <div>
+                <p class="book-title">Journey to the Center of the Earth</p>
+                <span class="book-rating">⭐ 4.4</span>
+            </div>
+        </div>
+        </td>
+            <td>Jules Verne</td>
+            <td><span class="badge">Science Fiction</span></td>
+            <td class="text-secondary">978-0451532152</td>
+            <td class="text-secondary">1864</td>
+            <td class="action-buttons">
+            <button class="btn-icon">👁️</button>
+            <button class="btn-icon">✏️</button>
+            <button class="btn-icon btn-delete">🗑️</button>
+        </td>
+        </tr>
+
+        <!--7-->
+        <tr>
+        <td>
+        <div class="book-info">
+            <div class="book-cover">
+                <img src="image/percy.jpg" alt="percy" width="60px" height="76px">
+            </div>
+            <div>
+                <p class="book-title">Percy Jackson and the Olympians</p>
+                <span class="book-rating">⭐ 4.7</span>
+            </div>
+        </div>
+        </td>
+            <td>Rick Riordan</td>
+            <td><span class="badge">Fantasy</span></td>
+            <td class="text-secondary">978-0786838653</td>
+            <td class="text-secondary">2005</td>
+            <td class="action-buttons">
+            <button class="btn-icon">👁️</button>
+            <button class="btn-icon">✏️</button>
+            <button class="btn-icon btn-delete">🗑️</button>
+        </td>
+        </tr>
+
+        <!--8-->
+        <tr>
+        <td>
+        <div class="book-info">
+            <div class="book-cover">
+                <img src="image/mockingbird.jpg" alt="mockingbird" width="60px" height="76px">
+            </div>
+            <div>
+                <p class="book-title">To Kill a Mockingbird</p>
+                <span class="book-rating">⭐ 4.9</span>
+            </div>
+        </div>
+        </td>
+            <td>Harper Lee</td>
+            <td><span class="badge">Classic</span></td>
+            <td class="text-secondary">978-0061120084</td>
+            <td class="text-secondary">1960</td>
+            <td class="action-buttons">
+            <button class="btn-icon">👁️</button>
+            <button class="btn-icon">✏️</button>
+            <button class="btn-icon btn-delete">🗑️</button>
+        </td>
+        </tr>
+
+        </tbody>
+        </table>
+        </div>
+
+        </div>
+    <div id="addBookModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 2000; justify-content: center; align-items: center;">
+        <div style="background: #181d34; padding: 30px; border-radius: 8px; border: 1px solid #2c3e50; width: 90%; max-width: 500px; color: #fff;">
+            <h2 style="font-family: 'Bungee', sans-serif; margin-bottom: 20px;">Add New Book</h2>
+            <form id="addBookForm">
+                <input type="text" name="title" placeholder="Book Title" required style="width: 100%; padding: 10px; margin-bottom: 15px; background: #2c3e50; border: 1px solid #2e2b33; color: #fff; font-family: 'Cuprum', sans-serif;">
+                <input type="text" name="author" placeholder="Author" required style="width: 100%; padding: 10px; margin-bottom: 15px; background: #2c3e50; border: 1px solid #2e2b33; color: #fff; font-family: 'Cuprum', sans-serif;">
+                <input type="text" name="genre" placeholder="Genre" style="width: 100%; padding: 10px; margin-bottom: 15px; background: #2c3e50; border: 1px solid #2e2b33; color: #fff; font-family: 'Cuprum', sans-serif;">
+                <input type="date" name="release_date" style="width: 100%; padding: 10px; margin-bottom: 15px; background: #2c3e50; border: 1px solid #2e2b33; color: #7f8c8d; font-family: 'Cuprum', sans-serif;">
+                <textarea name="description" placeholder="Short Description..." style="width: 100%; padding: 10px; margin-bottom: 15px; background: #2c3e50; border: 1px solid #2e2b33; color: #fff; font-family: 'Cuprum', sans-serif; resize: vertical;"></textarea>
+                <label style="display: block; margin-bottom: 5px; color: #7f8c8d; font-family: 'Cuprum', sans-serif;">Cover Image:</label>
+                <input type="file" name="coverImage" accept="image/*" style="width: 100%; margin-bottom: 25px; color: #fff; font-family: 'Cuprum', sans-serif;">
+                <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                    <button type="button" id="closeModalBtn" style="padding: 10px 20px; background: transparent; border: 1px solid #7f8c8d; color: #fff; cursor: pointer; border-radius: 4px; font-family: 'Cuprum', sans-serif;">Cancel</button>
+                    <button type="submit" style="padding: 10px 20px; background: #d4af37; border: none; color: #000; font-weight: bold; cursor: pointer; border-radius: 4px; font-family: 'Cuprum', sans-serif;">Publish Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+        </main>
+</body>
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+</html>
