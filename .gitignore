@@ -23,3 +23,5 @@ public/uploads/*
 .idea/
 Thumbs.db
 .DS_Store
+*.db-shm
+*.db-wal
